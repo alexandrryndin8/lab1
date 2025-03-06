@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navlinks {
+        @apply hover:bg-default_back p-2 max-sm:w-screen max-sm:border-b-2 border-bright_back max-sm:text-center;
+    }
+
+    .lablinks {
+        @apply hover:bg-dark_back  my-auto p-2  max-sm:w-screen  border-bright_back max-sm:text-center;
+    }
+
+    .burgerdiv {
+        @apply max-sm:flex flex-col justify-between items-center w-8 h-6 cursor-pointer sm:hidden max-sm:mr-8 max-sm:mt-4;
+    }
+
+    .labs {
+        @apply hover:bg-default_back my-auto p-2 max-sm:px-0 max-sm:w-screen max-sm:border-0 max-sm:border-b-2 border-bright_back max-sm:text-center;
+    }
+
+    .footer {
+        @apply flex flex-row w-full bg-dark_back border-t-2 border-bright_back items-center justify-center px-4 py-2 gap-4;
+    }
+
+    .header {
+        @apply flex border-b-2 border-bright_back flex-row w-full bg-dark_back text-white max-sm:justify-between relative;
+    }
+
+    .icon {
+        @apply basis-1/4 items-center justify-start px-4 min-w-40 max-sm:basis-auto;
+    }
+
+}
+
+@font-face {
+    font-family: 'Qanelas Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Qanelas Regular'), url('C:\univer\frontend\lab1\assets\qanelas-cufonfonts-webfont\QanelasRegular.woff') format('woff');
+    }
+    
+
+ 
