@@ -4,7 +4,7 @@
 
 @layer components {
     .navlinks {
-        @apply hover:bg-default_back p-2 max-sm:w-screen max-sm:border-b-2 border-bright_back max-sm:text-center;
+        @apply hover:bg-default_back p-2 max-sm:w-screen max-sm:border-b-2 border-bright_back max-sm:text-center rounded-xl;
     }
 
     .lablinks {

@@ -3,12 +3,12 @@
         <div class="icon">
             <img src="assets/images/icon.svg" class="w-16 h-16">
         </div>
-        <div class="basis-1/4 ma-sm:basis-auto text-dark_back"><NuxtLink to="/pashalko">пасхалко</NuxtLink></div>
+        <div class="basis-1/4 ma-sm:basis-auto text-dark_back"></div>
     
-    <nav :class="{'basis-1/2 flex flex-row items-center justify-end px-4 gap-4':!burger || burger,  
+    <nav :class="{'font-bold basis-1/2 flex flex-row items-center justify-end px-4 gap-4':!burger || burger,  
         'max-sm:basis-auto max-sm:absolute max-sm:top-full max-sm:w-screen max-sm:justify-center max-sm:flex-col max-sm:gap-0 max-sm:bg-dark_back max-sm::px-0':burger, 'max-sm:hidden': !burger}">
             <NuxtLink to="/" class = "navlinks max-sm:border-t-2 border-bright_back">Home</NuxtLink>
-            <div class = "labs" @click = "switch_submenu">Labs
+            <div class = "labs rounded-xl" @click = "switch_submenu">Labs
                 <div class ="hover:bg-default_back flex flex-col absolute top-full w-30 text-center max-sm:relative max-sm:w-screen" v-show = "submenu">
                     <NuxtLink to="/Lab3" class = "lablinks max-sm:border-t-2 max-sm:border-b-2">Lab3</NuxtLink>
                     <NuxtLink to="/Lab4" class = "lablinks max-sm:border-b-2">Lab4</NuxtLink>
@@ -37,19 +37,19 @@
 
   </header>
 
-  <main class="p-5 flex bg-default_back h-screen text-white">
+  <main class="p-5 flex bg-default_back min-h-screen text-white">
     <slot />
   </main>
 
-  <footer class="footer">
+  <footer class="footer static bottom-0">
     <a href="https://www.youtube.com/@MrBeast" target="_blank">
-      <img src="assets/images/youtube.png" width="60" height="60" class="w-16 h-16 bg-transparent">
+      <img src="assets/images/youtube.png"class="w-10 h-10 transition-transform duration-300 ease hover:scale-150 bg-transparent">
     </a>
     <a href="https://www.tiktok.com/@mrbeast" target="_blank">
-      <img src="assets/images/tiktok.png" width="60" height="60" class="w-16 h-16 bg-transparent">
+      <img src="assets/images/tiktok.png" class="w-10 h-10 transition-transform duration-300 ease hover:scale-150 bg-transparent">
     </a>
     <a href="https://www.instagram.com/mrbeast" target="_blank">
-      <img src="assets/images/insta.png" width="60" height="60" class="w-16 h-16 bg-transparent">
+      <img src="assets/images/insta.png" class="w-10 h-10 transition-transform duration-300 ease hover:scale-150 bg-transparent">
     </a>
   </footer>
 </template>
