@@ -9,5 +9,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@nuxtjs/tailwindcss']
+  modules: ['@nuxtjs/tailwindcss', '@sidebase/nuxt-auth'],
+  auth: {
+    globalAppMiddleware: true
+  },
+  runtimeConfig: {
+    porblic: {
+      GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
+      GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
+    },
+  },
 })

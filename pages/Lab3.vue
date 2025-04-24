@@ -1,6 +1,6 @@
 <template>
     <title>Minecraft house tutorials</title>
-    <main class="container mx-auto flex flex-wrap justify-center gap-4 p-4 sm:p-8 md:p-12 bg-default_back text-white min-h-screen">
+    <main class="mt-10 container mx-auto flex flex-wrap justify-center gap-4 p-4 sm:p-8 md:p-12 bg-default_back text-white min-h-screen">
     
     <div class="flex flex-col gap-2 border-dark_back border-1 bg-bright_back w-72 h-fit max-sm:h-auto items-center hover:border-black transition-transform duration-300 ease hover:scale-105 border-2 rounded-xl" v-for="(pic, index) in genpic" :key="index">
       <p class="text-white text-base font-bold pb-2 pt-2">{{pic.name}}</p>

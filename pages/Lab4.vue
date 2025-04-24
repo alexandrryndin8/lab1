@@ -1,6 +1,6 @@
 <template>
     <title>Minecraft music discs</title>
-    <main class="container mx-auto flex flex-wrap justify-center gap-4 p-12 bg-default_back text-white">
+    <main class="mt-10 container mx-auto flex flex-wrap justify-center gap-4 p-12 bg-default_back text-white">
     <div class="flex flex-col gap-2 border-dark_back border-1 bg-bright_back w-auto h-fit max-sm:h-auto items-center hover:border-black ransition-transform duration-300 ease hover:scale-105 border-2 rounded-xl" v-for="(disc, index) in gendisc" :key="index">
       <img :src="disc.image" class="w-auto h-auto p-2">
       <button class="transition-transform active:scale-95 pb-2" @click='player_switch(index)'>

@@ -1,5 +1,5 @@
 <template>
-  <header class = "header">
+  <header class = "header fixed top-0 z-40">
         <div class="icon">
             <img src="assets/images/icon.svg" class="w-16 h-16">
         </div>
@@ -17,7 +17,8 @@
                 </div>
             </div>
             <NuxtLink to="/login" class = "navlinks">LogIn</NuxtLink>
-            <NuxtLink to="/logout" class = "navlinks">LogOut</NuxtLink>
+            <div class = "navlinks" @click="signOut()">LogOut</div>
+            <img :src="data?.user?.image" v-show = 'log_check' class="w-14 h-14 border-2 border-black rounded-full">
         </nav>
             
         <div v-show="!burger" @click="switch_burger" class="burgerdiv">
@@ -37,7 +38,7 @@
 
   </header>
 
-  <main class="p-5 flex bg-default_back min-h-screen text-white">
+  <main class="p-5 flex bg-default_back min-h-screen text-white justify-center">
     <slot />
   </main>
 
@@ -83,7 +84,11 @@ const submenu = ref<boolean>(false)
 const switch_burger = ()=> {burger.value = !burger.value}
 const switch_submenu = ()=> {submenu.value = !submenu.value}
 
+const {signOut, status} = useAuth()
 
+const log_check = computed(() => status.value === 'authenticated')
+
+const {data} = await useFetch('/api/me')
 </script>
 
 

@@ -1,3 +1,9 @@
 <template>
     <div>Lab 6</div>
-</template> 
+</template>
+
+<script setup lang="ts">
+
+definePageMeta({middleware:'sidebase-auth'})
+
+</script>
